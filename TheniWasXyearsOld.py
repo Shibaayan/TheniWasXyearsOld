@@ -19,8 +19,8 @@ incident = dt.date(y_incident, m_incident, d_incident)
 difference = incident - dob
 
 print("Then I was approximately {} years {} months and {} days old.".format(   
-        int(difference.days/30/12),
-        int(difference.days/30%12),
-        int(difference.days%365%30)
+        int(difference.days/30/12), # Calculates the years without fraction
+        int(difference.days/30%12), # Calculates the months without fraction from that fraction
+        int(difference.days%365%30) # Calculates the days as a remaining fraction from the total number of days
     )
 )
